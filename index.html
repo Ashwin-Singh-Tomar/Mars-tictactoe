@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Paprika' rel='stylesheet'>
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="Images/icon.png">
 </head>
 <body>
     <div>
-        <div class="start_menu">
-            <h2 id="welcome">Welcome To The Game !</h2>
+        <div class="first_page">
+            <h2 id="welcome">Let's Begin !</h2>
 
-            <div id = "choose_opponent">
-                <h2>Choose opponent:</h2>
+            <div id = "play_against">
+                <h2>Play Against:</h2>
                 <button id="opponent-comp" onclick="ChoosePlayer(false)">Computer</button>
-                <button id="opponent-crew" onclick="ChoosePlayer(true)">Crew Member</button>
+                <button id="opponent-crew" onclick="ChoosePlayer(true)">Human</button>
             </div>
             <div id = "choose_symbol">
                 <h2>Choose your symbol:</h2>
@@ -34,18 +34,18 @@
                 <button id="starting-p2" onclick="ChooseStartingPlayer(false)">O</button><br><br>
             </div>
             <div id = "choose_level">
-                <h2>Select level:</h2>
-                <button id="level-easy" onclick="ChooseLevel(true)">Easy</button>
-                <button id="level-hard" onclick="ChooseLevel(false)">Hard</button><br><br>
+                <h2>Difficulty level:</h2>
+                <button id="level-easy" onclick="ChooseLevel(true)">Level 1</button>
+                <button id="level-hard" onclick="ChooseLevel(false)">Level 2</button><br><br>
             </div>
             <div id = "start_button">
-                <button id="start-game" onclick="StartGame()">Start Game</button>
+                <button id="start-game" onclick="StartGame()">Click to Start</button>
             </div>
         </div>
 
         <!--***************************************PART-2 -->
         <div class="start_playing">
-            <h2 id="playing">Lets play !!</h2>
+            <h2 id="playing">TIC-TAC-TOE!</h2>
             <div>
                 <table align="center">
                     <tr>
@@ -76,9 +76,9 @@
                 </table>
             </div>
             <div id="utility">
-                <button id="suggested-move" onclick="SuggestedMove()">Need Help ? </button>
-                <button id="back" onclick="Back()">Back</button>
-                <button id="reset" onclick="Reset()">Reset</button>
+                <button id="suggested-move" onclick="SuggestedMove()">HINT!</button>
+                <button id="back" onclick="Back()">Go Back</button>
+                <button id="reset" onclick="Reset()">Restart</button>
             </div>
         </div>
         <div id="message">

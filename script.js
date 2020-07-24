@@ -25,12 +25,12 @@ const boxes = document.querySelectorAll('.box');
 function ChoosePlayer(player){
     if(!player){
         computer=true;
-		document.getElementById("choose_opponent").style.display = 'none';
+		document.getElementById("play_against").style.display = 'none';
 		document.getElementById("choose_starting_player_comp").style.display = 'block';
     }
     else{
 		computer=false;
-		document.getElementById("choose_opponent").style.display = 'none';
+		document.getElementById("play_against").style.display = 'none';
 		document.getElementById("choose_starting_player").style.display = 'block';
 	}
 }
@@ -110,7 +110,7 @@ function ChooseLevel(level){
 function StartGame(){
 	document.getElementById("start_button").style.display = 'none';
     document.getElementById("welcome").style.display = 'none';
-    document.getElementsByClassName("start_menu")[0].style.display = 'none';
+    document.getElementsByClassName("first_page")[0].style.display = 'none';
     document.getElementsByClassName("start_playing")[0].style.display = 'block';
 	Play();
 }
@@ -119,7 +119,7 @@ function StartGame(){
 function change_scoreboard(){
 	if(computer)
 	{
-		document.getElementById("player1").innerText = 'Player';
+		document.getElementById("player1").innerText = 'Human';
 		document.getElementById("player2").innerText = 'Computer';
 	}
 	else{
@@ -140,9 +140,9 @@ function Back(){
 	document.getElementById('player2').className = 'score';
 	document.getElementById('player1').className = 'score';
 	document.getElementById("message").style.display = 'none';
-    document.getElementsByClassName("start_menu")[0].style.display = 'block';
+    document.getElementsByClassName("first_page")[0].style.display = 'block';
     document.getElementById("welcome").style.display = 'block';
-    document.getElementById("choose_opponent").style.display = 'block';
+    document.getElementById("play_against").style.display = 'block';
     document.getElementsByClassName("start_playing")[0].style.display = 'none';
 }
 function Reset(){
@@ -245,7 +245,7 @@ function checkGameDraw(board){
 		tie++;
 		document.getElementById("tie").innerText = tie;
 		document.getElementById("message").style.display = 'block';
-		document.getElementById("message").innerText = "Ugh !  It's a draw...";
+		document.getElementById("message").innerText = "DRAW!!";
 	}
 }
 
@@ -272,9 +272,9 @@ function display_winner(game_won){
 
 	document.getElementById("message").style.display = 'block';
 	if(game_won.player === p1_symb)
-		document.getElementById("message").innerText = "Hurray !  Player 1  won...";
+		document.getElementById("message").innerText = "Player 1 wins! Congrats!!";
 	else
-		document.getElementById("message").innerText = "Hurray !  Player 2  won...";
+		document.getElementById("message").innerText = "Player 2 wins! Congrats!!";
 
 	for (var i = 0; i < boxes.length; i++) {
 		boxes[i].removeEventListener('click', getClickID, false);
@@ -300,9 +300,9 @@ function display_winner_comp(game_won){
 	}
 	document.getElementById("message").style.display = 'block';
 	if(game_won.player === human_player)
-	document.getElementById("message").innerText = "Hurray !  You Won...";
+	document.getElementById("message").innerText = "You Won! Congrats!!";
 	else
-	document.getElementById("message").innerText = "Bad luck !  You Lose...";
+	document.getElementById("message").innerText = "You Lost!!";
 	for (var i = 0; i < boxes.length; i++) {
 		boxes[i].removeEventListener('click', getClickIDEasy, false);
 	}
