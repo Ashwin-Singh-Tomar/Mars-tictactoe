@@ -1,2 +1,4 @@
-# Mars-tictactoe
- The Mars Colonization Program
+# Tictactoe https://ashwin-singh-tomar.github.io/Mars-tictactoe/
+This is a tic tac toe game using AI involving hints and multiplayer on the same board.
+Game link - https://ashwin-singh-tomar.github.io/Mars-tictactoe/
+https://github.com/Ashwin-Singh-Tomar/Mars-tictactoe - Repo link
